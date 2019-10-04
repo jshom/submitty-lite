@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+EXECUTABLE=$1
+gcc $EXECUTABLE -o hw2 -Wall -g -m32
