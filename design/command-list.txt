@@ -10,3 +10,5 @@ slit test (args)
   [--test-case #] // specify test case
   [--test-case-list [-T] 1,2,3] // specify test case
   [--test-case-range ()]
+
+if using --check-memory. assume u already have drmemory installed
