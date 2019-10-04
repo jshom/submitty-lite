@@ -13,6 +13,3 @@ TODO
 ## Contributors
 - William Violet
 - Jacob Shomstein
-
-
-..
