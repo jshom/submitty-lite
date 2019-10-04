@@ -1,10 +1,12 @@
 slit build
 slit test
+slit help = slit -h
+slit verson = slit v
 slit run = alias (slit build && slit test)
 
 slit test (args)
   [--check-memory (-M)]
   [--ignore-whitespace (-W)]
   [--test-case #] // specify test case
-  [--test-case-list #] // specify test case
+  [--test-case-list [-T] 1,2,3] // specify test case
   [--test-case-range ()]
