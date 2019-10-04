@@ -1,0 +1,9 @@
+0. Install using the install script in the repo
+(now you should the code on your computer, should be able to run slit)
+
+Now assume in hw dir (new folder)
+1. Prompt user to create test cases. Define input type and input.txt or cli args and out.txt's (slit starthw) [NEEDS WORK, complete design before starting dev]
+2. slit build && slit test (slit run) (be able to do both at the same time with one command, or individually to pick up on compiler errors, or just running to avoid compile time)
+  - colordiff between each case
+  (cli options):
+  - whitespace ignore
