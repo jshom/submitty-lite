@@ -1,7 +1,7 @@
 slit build
 slit test
 slit help = slit -h
-slit verson = slit v
+slit version = slit v
 slit run = alias (slit build && slit test)
 
 slit test (args)
