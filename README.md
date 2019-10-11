@@ -8,7 +8,7 @@ Simple test runner for basic test cases to work around Submitty test case limit.
 TODO
 
 ## Installation
-TODO
+`bin/install`
 
 ## Contributors
 - William Violet
