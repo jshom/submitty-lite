@@ -12,7 +12,6 @@ Simple test runner for basic test cases to work around Submitty test case limit.
 - `slit init|start-hw`
 - `slit test`
 
-
 ## Installation
 `bash bin/install`
 
