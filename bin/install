@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo "[INSTALL] Building CLI"
+bash bin/build
+echo "[INSTALL] Copying to /usr/local/bin/slit"
+cp out/slit /usr/local/bin/

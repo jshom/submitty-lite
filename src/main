@@ -12,9 +12,15 @@ ARGS=${@:2}
 #   exit 0
 # fi
 
-
 if [[ "$COMMAND" == "woop" ]]; then
   woop $ARGS
+  exit 0
+fi
+
+if [[ -z "$COMMAND" ]]; then
+  # here is where we show the manual
+  # man slit (we may also need to add a man entry :) )
+  echo "woop is the only command right now. woop woop"
   exit 0
 fi
 
