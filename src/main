@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+COMMAND=$1
+ARGS=${@:2}
+
+# echo "COMMAND: $COMMAND"
+# echo "ELSE: $ARGS"
+
+# if [[ "$COMMAND" == "init" ]]; then
+#   # run init here (init)
+#   echo "N/A"
+#   exit 0
+# fi
+
+
+if [[ "$COMMAND" == "woop" ]]; then
+  woop $ARGS
+  exit 0
+fi
+
+# Print error if no command (route) found
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "${RED}Sorry, cmd [$COMMAND] not found${NC}\n"
+exit 1

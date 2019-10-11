@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+function woop() {
+  echo "woop woop"
+}

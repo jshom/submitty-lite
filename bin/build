@@ -1,1 +1,17 @@
 #!/usr/bin/env bash
+echo "[BUILD] Concat route files"
+
+# Clear and start slit build with insert shebang
+echo "#!/usr/bin/env bash" > ./out/slit
+
+# Insert headers for info
+echo "" >> ./out/slit
+echo "########################################################" >> ./out/slit
+echo "# Build Time: $(date)" >> ./out/slit
+echo "# Git Revision: $(git rev-parse HEAD)" >> ./out/slit
+echo "########################################################" >> ./out/slit
+echo "" >> ./out/slit
+
+# Insert source bash files
+cat ./src/routes/* >> ./out/slit
+cat ./src/main     >> ./out/slit
