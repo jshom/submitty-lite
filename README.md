@@ -13,7 +13,10 @@ Simple test runner for basic test cases to work around Submitty test case limit.
 - `slit test`
 
 ## Installation
-`bash bin/install`
+```bash
+bash bin/install
+
+```
 
 ## Contributors
 - William Violet

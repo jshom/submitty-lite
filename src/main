@@ -3,14 +3,10 @@
 COMMAND=$1
 ARGS=${@:2}
 
-# echo "COMMAND: $COMMAND"
-# echo "ELSE: $ARGS"
-
-# if [[ "$COMMAND" == "init" ]]; then
-#   # run init here (init)
-#   echo "N/A"
-#   exit 0
-# fi
+if [[ "$COMMAND" == "test" ]]; then
+  test $ARGS
+  exit 0
+fi
 
 if [[ "$COMMAND" == "woop" ]]; then
   woop $ARGS
