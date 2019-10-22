@@ -1,3 +1,26 @@
 #!/usr/bin/env bash
-EXECUTABLE=$1
-gcc $EXECUTABLE -o hw2 -Wall -g -m32
+
+# Clear and start slit build with insert shebang
+echo "[BUILD] Clearing out/slit"
+echo "[BUILD] Adding shebang"
+
+echo "#!/usr/bin/env bash" > ./out/slit
+
+# Insert headers for info
+echo "[BUILD] Adding build info"
+echo "" >> ./out/slit
+echo "########################################################" >> ./out/slit
+echo "# Build Time: $(date)" >> ./out/slit
+echo "# Git Revision: $(git rev-parse HEAD)" >> ./out/slit
+echo "########################################################" >> ./out/slit
+echo "" >> ./out/slit
+
+# Insert source bash files
+echo "[BUILD] Inserting routes"
+cat ./src/routes/* >> ./out/slit
+echo "[BUILD] Inserting router"
+cat ./src/main     >> ./out/slit
+
+echo "[BUILD] Added exec permission"
+chmod +x ./out/slit
+echo "[BUILD] Done"
