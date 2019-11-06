@@ -1,5 +1,5 @@
-#!/usr/bin/env bash  
-# slit command to create directories and all necessary files to start homework 
+#!/usr/bin/env bash
+# slit command to create directories and all necessary files to start homework
 # Assume that we are in homework dir
 function start()
 {
@@ -37,13 +37,11 @@ function start()
 # =main
 function main()
 {
-	read -r -p "Are you in desired homework directory? [y/N] " response 
-	if [["$response" =~ ^([yY][eE][sS]|[yY]) +$ ]] 
+	read -r -p "Are you in desired homework directory? [y/N] " response
+	if [["$response" =~ ^([yY][eE][sS]|[yY]) +$ ]]
 	then
 		start
 	else
-		Echo "Please navigate to your desired Homework Directory and run again" #with -stupid ("you piece of shit") 
-	fi 
-}	
-
-	
+		Echo "Please navigate to your desired Homework Directory and run again" #with -stupid ("you piece of shit")
+	fi
+}
