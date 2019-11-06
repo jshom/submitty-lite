@@ -4,6 +4,8 @@
 echo "[BUILD] Clearing out/slit"
 echo "[BUILD] Adding shebang"
 
+mkdir -p ./out
+
 echo "#!/usr/bin/env bash" > ./out/slit
 
 # Insert headers for info

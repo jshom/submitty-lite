@@ -20,6 +20,11 @@ if [[ -z "$COMMAND" ]]; then
   exit 0
 fi
 
+if [[ "$COMMAND" == "init" ]]; then
+  init $ARGS
+  exit 0
+fi
+
 # Print error if no command (route) found
 RED='\033[0;31m'
 NC='\033[0m' # No Color
