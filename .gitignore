@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 out/
 .slit
+=======
+out/*
+out
+**/.DS_Store
+.DS_Store
+>>>>>>> 4ece9d5a286e815115c9ec1aae7c5bc05045e38f
