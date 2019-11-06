@@ -1,13 +1,63 @@
 #!/usr/bin/env bash
 
 ########################################################
-# Build Time: Tue Nov  5 19:24:54 EST 2019
-# Git Revision: 973b8440e6f2a17f6012a5dcc7d51a3e9195e189
+# Build Time: Tue Nov  5 19:57:46 EST 2019
+# Git Revision: c3a4e6089d9173503ee7b3d7f8e4b75115ad05fc
 ########################################################
 
 #!/usr/bin/env bash
 function woop() {
   echo "woop woop"
+}
+#!/usr/bin/env bash
+# slit command to create directories and all necessary files to start homework
+# Assume that we are in homework dir
+function start()
+{
+	TEST_CASES_FOLDER="test-cases"
+	TEST_RUN_OUT_FOLDER="test-run-out"
+
+ 	mkdir -p "$TEST_CASES_FOLDER"
+ 	mkdir -p "$TEST_RUN_OUT_FOLDER"
+	TEST_CASE_NUM=1
+
+	INPUT_MORE_TESTS="y"
+	while [[ "$INPUT_MORE_TESTS" == "y" ]]; do 
+		echo "----------------------------------------"
+		echo "enter input for test case $TEST_CASE_NUM"
+		echo "----------------------------------------"
+		read INPUT_TEST_CASE
+		echo $INPUT_TEST_CASE >> "$TEST_CASES_FOLDER/$TEST_CASE_NUM-in.txt"
+
+		echo "-------------------------------------------"
+		echo "enter expected out for input $TEST_CASE_NUM"
+		echo "-------------------------------------------"
+		read INPUT_EXP_OUT
+		echo $INPUT_EXP_OUT >> "$TEST_CASES_FOLDER/$TEST_CASE_NUM-expected-out.txt"
+
+		echo "-------------------------------------------"
+		echo "enter expected err for input $TEST_CASE_NUM"
+		echo "-------------------------------------------"
+		read INPUT_EXP_ERR
+		echo $INPUT_EXP_ERR >> "$TEST_CASES_FOLDER/$TEST_CASE_NUM-expected-err.txt"
+
+		read -r -p "Do you have more test cases to enter? [y/N] " INPUT_MORE_TESTS
+		TEST_CASE_NUM=$(($TEST_CASE_NUM + 1))
+	done
+
+}
+
+# =main
+function init()
+{
+	echo "Are you in desired homework directory? [y/N] " 
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]];
+	then
+		start
+	else
+		echo "Please navigate to your desired Homework Directory and run again" #with -stupid ("you piece of shit")
+	fi
 }
 #!/usr/bin/env bash
 function test() {
@@ -81,6 +131,11 @@ if [[ -z "$COMMAND" ]]; then
   # here is where we show the manual
   # man slit (we may also need to add a man entry :) )
   echo "woop is the only command right now. woop woop"
+  exit 0
+fi
+
+if [[ "$COMMAND" == "init" ]]; then
+  init $ARGS
   exit 0
 fi
 
