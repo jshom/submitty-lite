@@ -14,8 +14,7 @@ Simple test runner for basic test cases to work around Submitty test case limit.
 
 ## Installation
 ```bash
-bash bin/install
-
+bash bin/build && bash bin/install
 ```
 
 ## Contributors
