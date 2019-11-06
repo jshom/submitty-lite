@@ -8,8 +8,8 @@ function start()
 	cd test
 	TEST_CASE_NUM=1
 
-	INPUT_MORE_TESTS="y"
-	while [["$INPUT_MORE_TESTS" =~ ^([yY][eE][sS]|[yY]) +$ ]]; do 
+	INPUT_MORE_TESTS="yes"
+	while [["$INPUT_MORE_TESTS" == "yes" ]]; do 
 		echo "----------------------------------------"
 		echo "enter input for test case $TEST_CASE_NUM"
 		echo "----------------------------------------"
